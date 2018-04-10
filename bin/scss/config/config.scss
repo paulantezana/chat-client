@@ -71,7 +71,7 @@ $sizes: (
 );
 
 // APP font styles
-$app-font-color                 : shade(grey-dark);
+$app-font-color                 : shade(grey-lighter);
 $app-font-color-invert          : findColorInvert($app-font-color);
 $app-font-color-light           : shade(grey);
 $app-font-color-strong          : shade(grey-darker);
@@ -115,9 +115,3 @@ $app-radius-small       : 2px;
 $app-radius             : 3px;
 $app-radius-large       : 5px;
 $app-radius-rounded     : 1em;
-
-
-:root{
-    --color: #1177EB;
-    --colors: green;
-}

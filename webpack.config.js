@@ -23,11 +23,12 @@ module.exports = {
     module: {
         rules:[
             {
-                test: /\.config.css$/,
+                test: /\.config.scss$/,
                 loader: 'babel-loader!postcss-variables-loader'
             },
             {
                 test    : /\.(scss|css)/,
+                exclude: /\.config.scss$/,
                 use     : ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use : ['css-loader','postcss-loader','sass-loader']

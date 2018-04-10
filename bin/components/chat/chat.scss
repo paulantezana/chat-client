@@ -1,9 +1,9 @@
 .chat{
-    background: white;
+    background: var(--white);
     position: absolute;
     bottom: 0;
     width: 270px;
-    height: 420px;
+    height: 350px;
 
     // center main
     left: 50%;
@@ -14,43 +14,96 @@
     overflow: hidden;
 
     .profile{
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 1.8rem;
+        width: 1.8rem;
         border-radius: 100%;
     }
 
     &__header{
-        background: var(--color);
-        padding: 0.5rem;
+        background: var(--color-2);
+        padding: 0.4rem;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
         .profile{
-            height: 2rem;
-            width: 2rem;
             margin-right: .5rem;
         }
+
         .userName{
             line-height: 1.2em;
             color: white;
         }
+
         .online{
             font-size: 0.7rem;
             line-height: 1em;
-            color: white;
+            color: var(--success);
         }
     }
+
     &__main{
         overflow: auto;
         height: 17rem;
+        padding: .7rem;
+    }
+
+    &__message.send{
+        display: flex;
+        flex-direction: row-reverse;
+
+        .chat__message__body{
+            background: var(--color-2);
+            padding: 0.3rem;
+            border: 1px solid var(--color-1);
+            border-radius: 5px;
+            font-size: 0.8rem;
+            line-height: 1.4em;
+            color: var(--white-ter);
+        }
+    }
+
+    &__message.recipient{
+        display: flex;
+        
+        .chat__message__body{
+            background: var(--white-ter);
+            padding: 0.3rem;
+            border: 1px solid var(--grey-lighter);
+            border-radius: 5px;
+            font-size: 0.8rem;
+            line-height: 1.4em;
+            color: var(--grey-dark);
+        }
     }
 
     &__message{
-        &__body{
-            background: white;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        
+        &__profile{
+            flex: 0 0 2.7rem;
+        }
+
+        &__date{
+            color: var(--grey-light);
+            font-size: 0.7rem;
+        }
+        &__read{
+            color: var(--success);
+        }
+
+    }
+    &__footer{
+        border-top: 1px solid var(--white-ter);
+        form{
+            display: flex;
+        }
+        input{
+            border: none;
             padding: 0.2rem;
-            border: 1px solid gray;
-            border-radius: 5px;
+            height: 100%;
+            display: block;
         }
     }
 }

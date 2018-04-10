@@ -16,30 +16,37 @@ class Chat extends Component{
                     </div>
                 </div>
                 <div className="chat__main">
-                    <div className="chat__message">
+                    <div className="chat__message send">
+                        <div className="chat__message__content">
+                            <div className="chat__message__body">
+                                message send new message send new meee send new message for send new message on send new open message
+                            </div>
+                            <div><span className="chat__message__date">12-17-2018</span> <span className="chat__message__read">♠</span> </div>
+                        </div>
+                    </div>
+                    <div className="chat__message recipient">
                         <div className="chat__message__profile"><img src={Profile} alt="" className="profile"/></div>
-                        <div className="chat__message__body">
-                            <p>message send new message send new meee send new message for send new message on send new open message</p>
-                        </div>
-                        <p><span>12-17-2018</span> <span>♠</span> </p>
-                    </div>
-                    <div className="chat__message">
-                        <div className="chat__message__item"><img src={Profile} alt="" className="profile"/></div>
-                        <div className="chat__message__item">
-                            <p>message send new message send new meee send new message for send new message on send new open message</p>
-                            <p><span>12-17-2018</span> <span>♠</span> </p>
+                        <div className="chat__message__content">
+                            <div className="chat__message__body">
+                                message send new message 
+                            </div>
+                            <div><span className="chat__message__date">12-17-2018</span> <span className="chat__message__read">♠</span> </div>
                         </div>
                     </div>
-                    <div className="chat__message">
-                        <div className="chat__message__item"><img src={Profile} alt="" className="profile"/></div>
-                        <div className="chat__message__item">
-                            <p>message send new message send new meee send new message for send new message on send new open message</p>
-                            <p><span>12-17-2018</span> <span>♠</span> </p>
+                    <div className="chat__message send">
+                        <div className="chat__message__content">
+                            <div className="chat__message__body">
+                                message send new message send new meee send new message for send new message on send new open message
+                            </div>
+                            <div><span className="chat__message__date">12-17-2018</span> <span className="chat__message__read">♠</span> </div>
                         </div>
                     </div>
                 </div>
                 <div className="chat__footer">
-                    <input type="text"/>
+                    <form action="">
+                        <input type="text" placeholder="Escribe un mensaje..." name="message"/>
+                        <input type="submit" value="enviar"/>
+                    </form>
                 </div>
             </div>
         )
