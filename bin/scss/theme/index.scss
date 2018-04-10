@@ -1,0 +1,23 @@
+$aside-color-1: #262F3D;
+$aside-color-2: #19212B;
+$aside-color-3: #373F4C;
+$aside-color-4: #404854;
+
+.main-menu-container{
+    background: $aside-color-1;
+    color: shade(grey-lighter);
+}
+
+.main-header-container,
+.main-aside-container{
+    background: $white;
+}
+
+.main-header-container{
+    border-bottom: 1px solid shade(grey-lighter);
+}
+
+.main-pages-container{
+    background: #CFD8DC;
+}
+

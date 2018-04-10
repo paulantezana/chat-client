@@ -1,0 +1,39 @@
+$header-height : 3rem;
+$menu-width: 256px;
+$aside-width: 256px;
+
+.root,
+.layout-container{
+    height: 100%;
+}
+.layout-container{
+    display: flex;
+}
+
+.main-menu-container{
+    flex: 0 0 $menu-width;
+}
+
+.main-container{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header-container{
+    padding: 0.1rem;
+    height: $header-height;
+}
+
+.main-content{
+    display: flex;
+}
+.main-content{
+    height: 100%;
+}
+.main-aside-container{
+    flex: 0 0 256px;
+}
+.main-pages-container{
+    flex: 1 1 auto;
+}

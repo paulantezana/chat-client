@@ -1,0 +1,56 @@
+.chat{
+    background: white;
+    position: absolute;
+    bottom: 0;
+    width: 270px;
+    height: 420px;
+
+    // center main
+    left: 50%;
+    transform: translateX(-50%);
+
+    box-shadow: 0 0 100px 20px rgba(#000,.2);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+
+    .profile{
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 100%;
+    }
+
+    &__header{
+        background: var(--color);
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .profile{
+            height: 2rem;
+            width: 2rem;
+            margin-right: .5rem;
+        }
+        .userName{
+            line-height: 1.2em;
+            color: white;
+        }
+        .online{
+            font-size: 0.7rem;
+            line-height: 1em;
+            color: white;
+        }
+    }
+    &__main{
+        overflow: auto;
+        height: 17rem;
+    }
+
+    &__message{
+        &__body{
+            background: white;
+            padding: 0.2rem;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+    }
+}
