@@ -57,6 +57,12 @@ module.exports = {
                 use     : ['html-loader','pug-html-loader']
             },
 
+            // the following 3 rules handle font extraction
+            {
+                test: /\.(ttf|eot|woff|woff2|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader'
+            },
+
             {
                 test    : /\.(png|jpg|svg)$/,
                 use     : 'file-loader'
