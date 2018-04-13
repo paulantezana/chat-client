@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // style libraries
+import 'semantic-ui-css/semantic.min.css';
 
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
