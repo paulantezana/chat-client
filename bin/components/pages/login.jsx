@@ -1,12 +1,22 @@
 import React, { Component } from "react";
 import { Button, Checkbox, Form, Input, Label } from 'semantic-ui-react';
 import login from "./login.scss";
+import { runInThisContext } from "vm";
 
 class Login extends Component{
+
+    constructor(props){
+        super(props);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onSubmit(e){
+        e.preventDefault();
+    }
     render(){
         return(
             <div className="login-container">
-                <Form>
+                <Form onSubmit={this.onSubmit}>
                     <Form.Field>
                         <Input icon='user' iconPosition='left' placeholder='Nombre de usuario' />
                     </Form.Field>
@@ -14,9 +24,9 @@ class Login extends Component{
                         <Input icon='user' iconPosition='left' placeholder='Contraseña' type="password" />
                     </Form.Field>
                     <Button.Group>
-                        <Button>Salir</Button>
+                        <Button type="reset">Cancelar</Button>
                         <Button.Or text='O'/>
-                        <Button positive>Login</Button>
+                        <Button type='submit' color="positive">enviar</Button>
                     </Button.Group>
                 </Form>
                 <a href="">olvido su contraseña</a>

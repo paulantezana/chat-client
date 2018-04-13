@@ -1,0 +1,30 @@
+body,
+.root,
+.grid-container{
+    height: 100%;
+    background: #FAFAFA;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 220px 1fr 200px;
+    grid-template-rows: 50px 1fr;
+    &__menu{
+        background: #19212B;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+    }
+    &__header{
+        background: var(--white);
+        grid-column: 2 / span 2;
+        border-bottom: 1px solid #E6E6E6;
+    }
+    &__pages{
+        grid-column: 2 / span 1;
+    }
+    &__aside{
+        background: white;
+        border-left: 1px solid #E6E6E6;
+        grid-column: 3 / span 1;
+    }
+}

@@ -14,6 +14,7 @@ module.exports = {
 
     devServer: {
         contentBase : path.join(__dirname, "public"),
+        historyApiFallback: true,
         compress    : true,
         port        : 3005,
         open        : true,
@@ -37,7 +38,7 @@ module.exports = {
             },
 
             {
-                test    : /\.(jsx?|js)$/,
+                test    : /\.(js|jsx?)$/,
                 exclude : /node_modules/,
                 use     : 'babel-loader'
             },
