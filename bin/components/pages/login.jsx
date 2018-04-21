@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, Icon, Input, Divider, Message } from 'semantic-ui-react';
-import login from "./login.scss";
-import { runInThisContext } from "vm";
+import "./login.scss";
+import { login } from "./../helpers/auth.jsx";
 
 class Login extends Component{
 
@@ -23,9 +23,9 @@ class Login extends Component{
 
     onSubmit(e){
         e.preventDefault();
+        login(this.state.args.username,this.state.password);
+        
     }
-
-
     render(){
         return(
             <div className="block block-login">
@@ -43,7 +43,7 @@ class Login extends Component{
                             placeholder='Nombre de usuario'
                             name="username"
                             onChange={this.handleChange}
-                            icon={<Icon name='close'/>}  />
+                            icon={<Icon color="red" name='close'/>}  />
                     </Form.Field>
 
                     <Form.Field>
@@ -57,7 +57,7 @@ class Login extends Component{
 
                     <Button
                         disabled={!this.state.args.username || !this.state.args.password}
-                        type='submit' color='primary' fluid>Ingresar</Button>
+                        type='submit' color='blue' fluid>Ingresar</Button>
 
                 </Form>
 

@@ -21,6 +21,8 @@ import NotFound from "./error.jsx";
 
 import rootReducer from "./rootReducer.jsx";
 
+import { authenticate } from "./helpers/auth.jsx";
+
 const store = createStore(
     rootReducer
 )
@@ -36,8 +38,17 @@ class App extends Component{
     constructor(props){
         super(props)
         this.state = {
+            loggin: false,
             redirectToReferrer: false
         }
+    }
+
+    componentDidMount(){
+
+    }
+
+    componentWillMount(){
+
     }
 
     render(){
@@ -51,6 +62,7 @@ class App extends Component{
                         </ul>
                         <Switch>
                             <Route exact path="/" component={Home} />
+                            <PrivateRoute exact path="/app" component={Home} />
                             <Route exact path="/login" component={Login} />
                             <Route component={NotFound} />
                         </Switch>
@@ -61,23 +73,11 @@ class App extends Component{
     }
 }
 
-const fakeAuth = {
-    isAuthenticated: false,
-    authenticate(cb) {
-      this.isAuthenticated = true;
-      setTimeout(cb, 100); // fake async
-    },
-    signout(cb) {
-      this.isAuthenticated = false;
-      setTimeout(cb, 100);
-    }
-};
-
 const PrivateRoute = ({ component: Component, rest }) => (
     <Route
       {...rest}
       render={props =>
-        fakeAuth.isAuthenticated
+        authenticate()
             ? ( <Component {...props} /> )
             : ( <Redirect to={{
               pathname: "/login",
