@@ -17,6 +17,7 @@ import Chat from "./chat/chat.jsx";
 import Login from "./pages/login.jsx";
 import Home from "./home.jsx";
 import NotFound from "./error.jsx";
+import Init from "./pages/init.jsx";
 
 
 import rootReducer from "./rootReducer.jsx";
@@ -55,18 +56,12 @@ class App extends Component{
         return(
             <Provider store={store}>
                 <Router>
-                    <div>
-                        <ul>
-                            <li><Link to="/login">Login</Link></li>
-                            <li><Link to="/otro">otro</Link></li>
-                        </ul>
-                        <Switch>
-                            <Route exact path="/" component={Home} />
-                            <PrivateRoute exact path="/app" component={Home} />
-                            <Route exact path="/login" component={Login} />
-                            <Route component={NotFound} />
-                        </Switch>
-                    </div>
+                    <Switch>
+                        <Route exact path="/" component={Init} />
+                        <PrivateRoute exact path="/app" component={Home} />
+                        <Route exact path="/login" component={Login} />
+                        <Route component={NotFound} />
+                    </Switch>
                 </Router>
             </Provider>
         )
