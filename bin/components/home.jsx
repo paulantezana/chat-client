@@ -9,6 +9,19 @@ import { Breadcrumb } from 'semantic-ui-react';
 import index from './index.scss';
 
 class Home extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            visible: true
+        }
+        this.toggleAside = this.toggleAside.bind(this);
+    }
+
+    toggleAside(){
+        this.setState({
+            visible: !this.state.visible
+        })
+    }
     render(){
         return(
             <div className="grid-container">

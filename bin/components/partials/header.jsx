@@ -1,22 +1,27 @@
 import React, { Component } from "react";
 import { Button, Dropdown, Menu, Image } from 'semantic-ui-react';
+import profile from "./../media/profile.png";
+import './header.scss';
 
 class Header extends Component{
     render(){
         return(
-            <Menu>
+            <Menu secondary>
+                <Menu.Menu>
+                    <Menu.Item
+                        icon='sidebar'/>
+                </Menu.Menu>
                 <Menu.Menu position='right'>
-                <Dropdown item text='Language'>
-                    <Dropdown.Menu>
-                    <Dropdown.Item>English</Dropdown.Item>
-                    <Dropdown.Item>Russian</Dropdown.Item>
-                    <Dropdown.Item>Spanish</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-                <Image src='/assets/images/wireframe/square-image.png' avatar />
-                <Menu.Item>
-                    <Button primary>Sign Up</Button>
-                </Menu.Item>
+                    <Image src={profile} avatar/>
+                    <Dropdown item text='User Name' pointing>
+                        <Dropdown.Menu>
+                            <Dropdown.Item icon='user' text='Cuenta' />
+                            <Dropdown.Item icon='discussions' text='Inbox' />
+                            <Dropdown.Item icon='settings' text='Configuración' />
+                            <Dropdown.Item icon='sign out' text='Salir' />
+                        </Dropdown.Menu>
+                    </Dropdown>
+                    <Menu.Item icon="bars"/>
                 </Menu.Menu>
             </Menu>
         )

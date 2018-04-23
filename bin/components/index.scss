@@ -8,16 +8,19 @@ body,
 .grid-container{
     display: grid;
     grid-template-columns: 220px 1fr 200px;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 45px 1fr;
     &__menu{
         background: #19212B;
         grid-column: 1 / span 1;
         grid-row: 1 / span 2;
     }
     &__header{
-        // background: var(--white);
+        background: var(--white);
         grid-column: 2 / span 2;
-       // border-bottom: 1px solid #E6E6E6;
+        border-bottom: 1px solid #E6E6E6;
+        &>div{
+            height: 100%;
+        }
     }
     &__pages{
         grid-column: 2 / span 1;

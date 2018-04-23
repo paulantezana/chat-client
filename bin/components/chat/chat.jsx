@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import chat from "./chat.scss";
-import Profile from "./../media/profile.jpg";
 
 class Chat extends Component{
     render(){
