@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Header from "./partials/header.jsx";
 import Chat from "./chat/chat.jsx";
 import Login from "./pages/login.jsx";
+import Aside from "./aside/aside.jsx";
+import HomePage from "./pages/home.jsx"; 
 
 import { Breadcrumb } from 'semantic-ui-react';
 
@@ -32,15 +34,11 @@ class Home extends Component{
                     <Header/>
                 </div>
                 <div className="grid-container__pages">
-                    <Breadcrumb>
-                        <Breadcrumb.Section link>Home</Breadcrumb.Section>
-                        <Breadcrumb.Divider icon='right angle' />
-                        <Breadcrumb.Section link>Store</Breadcrumb.Section>
-                        <Breadcrumb.Divider icon='right angle' />
-                        <Breadcrumb.Section active>T-Shirt</Breadcrumb.Section>
-                    </Breadcrumb>
+                    <HomePage/>
+                    <Chat/>
                 </div>
                 <div className="grid-container__aside">
+                    <Aside/>
                 </div>
             </div>
         )
